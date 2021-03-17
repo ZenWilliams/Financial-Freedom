@@ -10,13 +10,16 @@ export default function Login () {
         const value = target.value
         const name = target.name
 
+
         setUserInfo({
+            ...UserInfo,
             [name]:value
-        })
+        });
+
+        
     }
     const handleClick = ()=> {
-        console.log("User Info:");
-        console.log(UserInfo.Email)
+        setUserInfo(UserInfo);
     }
 
     return (
@@ -26,12 +29,14 @@ export default function Login () {
 
             <div className="form-group">
                 <label htmlFor="Email">Email</label>
-                <input id="Email" type="email" className="form-control" placeholder="Enter email" value={UserInfo.Email} onChange={handleChange}/>
+                <input name="Email" type="email" className="form-control" placeholder="Enter email" required
+                     value={UserInfo.Email} onChange={handleChange}/>
             </div>
 
             <div className="form-group">
                 <label htmlFor="Password">Password</label>
-                <input id="Password" type="password" className="form-control" placeholder="Enter password" value={UserInfo.Password} onChange={handleChange}/>
+                <input name="Password" type="password" className="form-control" required
+                    placeholder="Enter password" value={UserInfo.Password} onChange={handleChange}/>
             </div>
 
             <div className="form-group">
@@ -43,7 +48,7 @@ export default function Login () {
 
             <button type="submit" className="btn btn-dark btn-lg btn-block" onClick={handleClick}>Sign in</button>
             <p className="forgot-password text-right">
-                Forgot <a href="#">password?</a>
+                Forgot <a href="./Support">password?</a>
             </p>
         </form>
     );
