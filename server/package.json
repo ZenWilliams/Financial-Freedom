@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server of Financial Freedom",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZenWilliams/Financial-Freedom.git"
+  },
+  "author": "Williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZenWilliams/Financial-Freedom/issues"
+  },
+  "homepage": "https://github.com/ZenWilliams/Financial-Freedom#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
